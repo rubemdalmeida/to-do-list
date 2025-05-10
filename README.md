@@ -13,10 +13,10 @@ Este é um projeto de lista de tarefas simples, desenvolvido com o objetivo de p
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla JS)
+- JavaScript
 
 ## 📁 Como usar
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/to-do-list.git
+   git clone https://github.com/seu-usuario/to-do-listr.git
