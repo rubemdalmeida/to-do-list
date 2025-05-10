@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    height: 100vh;
+    color: #ffffff;
+}
+
+.todo-list {
+    width: 100%;
+    max-width: 600px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.todo-list header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 20px;
+    background-color: #2d8cff;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.wrapper-list ul.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-list ul.list li {
+    position: relative;
+    background-color: #292929;
+    border-bottom: 1px solid #444;
+    padding: 18px 20px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: flex-start; /* Garante que os itens fiquem alinhados à esquerda */
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.wrapper-list ul.list .check {
+    background-color: #2d8cff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wrapper-list ul.list .task {
+    flex-grow: 1; /* Faz com que o nome da tarefa ocupe o restante do espaço */
+}
+
+.wrapper-list ul.list li:hover {
+    background-color: #3a3a3a;
+}
+
+.wrapper-list button.remove {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: wheat;
+    font-weight: bold;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wrapper-list button.remove:hover {
+    background-color: aliceblue;
+}
+
+
+
+.wrapper-list ul.list .check {
+    background-color: #2d8cff;
+    color: white;
+    border-radius: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wrapper-list ul.list .check:hover {
+    background-color: aliceblue;
+}
+
+.wrapper-list ul.list li:hover button.remove {
+    opacity: 1;
+}
+
+.wrapper-list ul.list .done .task{
+    text-decoration: line-through;
+}
+
+.wrapper-list ul.list .done .check task{
+    text-decoration: line-through;
+}
+
+.wrapper-list ul.list li:hover{
+    background-color: #3f3b3b;
+}
+
+.wrapper-list ul.list .done .check::after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    right: 1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+}
+.wrapper-list ul.list li.removed{
+    animation: collapsItem 300ms ease ;
+}
+.wrapper-list ul.list li.hidden {
+    display: none;
+}
+
+
+
+.wrapper-list button.remove{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: wheat;
+    font-weight: bold;
+    border-radius:  100%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.wrapper-list button.remove:hover {
+    background-color: aliceblue;
+}
+
+.wrapper-list button.remove::after {
+   content: "x";
+    color: white;
+    display: block;
+}
+
+.todo-list footer{
+    background-color: #3f3b3b;
+}
+
+.todo-list footer input{
+    background-color: #3f3b3b ;
+    border: none;
+    outline: none;
+    width: 90%;
+    width: 90%;
+    padding: 20px;
+    padding: 20px;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: white;
+}
+
+
+
+
+@keyframes collapsItem {
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(-90deg);
+    }
+}
