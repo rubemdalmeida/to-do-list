@@ -19,4 +19,4 @@ Este é um projeto de lista de tarefas simples, desenvolvido com o objetivo de p
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/to-do-listr.git
+   git clone https://github.com/seu-usuario/to-do-list.git
